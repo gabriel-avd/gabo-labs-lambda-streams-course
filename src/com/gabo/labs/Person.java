@@ -30,6 +30,6 @@ public class Person {
     }
 
     public String toString(){
-        return "\nName: "+this.getName() + " Age: "+this.getAge();
+        return "Name: "+this.getName() + " Age: "+this.getAge();
     }
 }
