@@ -20,20 +20,21 @@ public class Main {
         personList.add(new Person(45, "Beatriz"));
 
         personList.forEach(System.out::println);
-        personList.removeIf(p -> p.getAge() > 30);
+        personList.removeIf(p -> p.getAge() < 30);
 
         System.out.println("");
 
-        personList.forEach(System.out::println);
+        //personList.forEach(System.out::println);
         personList.replaceAll(p -> p.setName(p.getName().toUpperCase()));
 
         System.out.println("");
 
+        personList.sort(Comparator.comparing(Person::getName));
         personList.forEach(System.out::println);
 
 
         //MAP
-
+/*
         System.out.println("");
 
         Map<String, List<Person> >map = new HashMap<>();
@@ -51,6 +52,6 @@ public class Main {
         map.putIfAbsent("Boston", new ArrayList<>());
 
         map.forEach((x,y)-> System.out.println(x + " - "+ y));
-
+*/
     }
 }
